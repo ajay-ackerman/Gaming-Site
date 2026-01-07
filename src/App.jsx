@@ -4,7 +4,10 @@ import Hero from './components/Hero'
 import About from './components/about'
 import Navbar from './components/Navbar'
 import { useGSAP } from '@gsap/react'
-
+import Features from './components/Features'
+import Story from './components/Story'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -13,6 +16,10 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Features />
+      <Story />
+      <Contact />
+      <Footer />
     </main>
   )
 }
