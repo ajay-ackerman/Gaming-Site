@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Hero from './components/Hero'
-import About from './components/about'
+import About from './components/About'
 import Navbar from './components/Navbar'
 import { useGSAP } from '@gsap/react'
 import Features from './components/Features'
