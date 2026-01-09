@@ -27,19 +27,19 @@ function About() {
     return (
         <div id='about' className='min-h-screen w-screen '>
             <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
-                <h2 className='font-general text-sm uppercase md:text-[10px]'>Welcome to Zentry</h2>
+                <h2 className='font-general text-sm uppercase md:text-sm'>Welcome to the Wild Grid</h2>
                 <AnimatedTitle
-                    title="Disc<b>o</b>ver the world's <br/> largest shared <b>a</b>dventure"
+                    title="NAVIG<b>A</b>TE THE PL<b>A</b>NET'S DEEPEST BACKC<b>OU</b>NTRY TRAILS."
                     containerClass="mt-5 !text-black text-center"
                 />
                 <div className='about-subtext'>
-                    <p>The game of games begins-your life, now an epic MMORG</p>
-                    <p>Zentry unites every player from countless games and platforms</p>
+                    <p>The ride of rides begins—your journey, now a pursuit of pure adrenaline</p>
+                    <p>Dirty roades unites every rider across every trail and technical terrain</p>
                 </div>
             </div>
             <div className='h-dvh w-screen' id='clip'>
                 <div className='mask-clip-path about-image'>
-                    <img src="img/about.webp" alt="Backgroud"
+                    <img src="img/about.png" alt="Backgroud"
                         className='absolute left-0 top-0 size-full object-cover' />
 
                 </div>

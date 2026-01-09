@@ -16,7 +16,7 @@ const Hero = () => {
     const [loading, setLoading] = useState(true);
     const [loadedVideos, setLoadedVideos] = useState(0);
 
-    const totalVideos = 4;
+    const totalVideos = 2;
     const nextVdRef = useRef(null);
 
     const handleVideoLoad = () => {
@@ -80,7 +80,7 @@ const Hero = () => {
         });
     });
 
-    const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
+    const getVideoSrc = (index) => `videos/zero-${index}.mp4`;
 
     return (
         <div className="relative h-dvh w-screen overflow-x-hidden">
@@ -139,34 +139,36 @@ const Hero = () => {
                     />
                 </div>
 
-                <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-                    G<b>A</b>MING
+                <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-white">
+
+                    <b>O</b>FFROA<b>D</b>ING
                 </h1>
 
                 <div className="absolute left-0 top-0 z-40 size-full">
                     <div className="mt-24 px-5 sm:px-10">
-                        <h1 className="special-font hero-heading text-blue-100">
+                        <h1 className="special-font hero-heading text-orange-500">
                             redefi<b>n</b>e
                         </h1>
 
                         <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-                            Enter the Metagame Layer <br /> Unleash the Play Economy
+                            Enter the Dirt. <br />Unleash Pure Performance
                         </p>
-
-                        <Button
-                            id="watch-trailer"
-                            title="Watch trailer"
-                            leftIcon={<TiLocationArrow />}
-                            containerClass="bg-yellow-300 flex-center gap-1"
-                        />
+                        <a href="https://youtu.be/vfxmrCv6fJ4" target="_blank">
+                            <Button
+                                id="watch-trailer"
+                                title="Watch trailer"
+                                leftIcon={<TiLocationArrow />}
+                                containerClass=" !bg-orange-400 flex-center gap-1"
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-                G<b>A</b>MING
+            <h1 className="special-font hero-heading absolute bottom-5 right-5 text-orange-500">
+                <b>O</b>FFROA<b>D</b>ING
             </h1>
-        </div>
+        </div >
     );
 };
 

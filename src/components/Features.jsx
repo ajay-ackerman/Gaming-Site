@@ -13,8 +13,8 @@ const BentoTilt = ({ children, className = '' }) => {
         const relativeX = (event.clientX - left) / width;
         const relativeY = (event.clientY - top) / height;
 
-        const tiltX = (relativeY - 0.5) * 15;
-        const tiltY = (relativeX - 0.5) * -15;
+        const tiltX = (relativeY - 0.5) * 10;
+        const tiltY = (relativeX - 0.5) * -10;
 
         const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.95, .95, .95)`;
         setTransformStyle(newTransform);
@@ -33,20 +33,20 @@ const BentoTilt = ({ children, className = '' }) => {
 
 }
 
-const BentoCard = ({ src, title, description }) => {
+const BentoCard = ({ src, title, description, titleColor = 'text-blue-50', descriptionColor = 'text-blue-50' }) => {
     return (
         <div className='relative size-full '>
             <video src={src}
                 loop
                 muted
                 autoPlay
-                className='absolute left-0 top-0 size-full object-cover object-center' />
-            <div className='relative z-10 flex flex-col size-full justify-between p-5 text-blue-50'>
+                className='absolute left-0 top-0 size-full object-cover object-center brightness-75' />
+            <div className={`relative z-10 flex flex-col size-full justify-between p-5 ${titleColor}`}>
                 <div className=''>
                     <h1 className='bento-title special-font'>{title}</h1>
                     {
                         description && (
-                            <p className='mt-3 max-w-64  !text-xs md:text-base'>
+                            <p className={`mt-3 max-w-64  !text-sm md:text-base descriptiom ${descriptionColor}`}>
                                 {description}
                             </p>
                         )
@@ -64,20 +64,19 @@ const Features = () => {
             <div className='container mx-auto px-3 md:px-10'>
                 <div className='px-5 py-32'>
                     <p className=' font-circular-web text-lg text-blue-50'>
-                        Into the Metagame Layer
+                        Into the Flow State
                     </p>
 
                     <p className='max-w-md font-circular-web text-lg text-blue-50 opacity-50'>
-                        Immerge yourself in a rich and ever-expanding universe where a vibrant array of products converhe into an interconnected overlay experience on your world
-                    </p>
+                        Step into a limitless and uncharted territory where rugged expeditions and technical mastery converge into an immersive adventure that redefines your reality.                    </p>
                 </div>
 
                 <BentoTilt className='border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'>
                     <BentoCard src="videos/feature-1.mp4"
                         title={
-                            <>radie<b>n</b>t</>
+                            <>Trail<b>H</b>ead</>
                         }
-                        description="A cross-platform metagame app, turning your activities across web2 and web3 games into a rewarding adventure."
+                        description="A multi-terrain adventure engine, turning your efforts across singletracks and mountain passes into a legendary descent."
 
                     />
                 </BentoTilt>
@@ -88,20 +87,24 @@ const Features = () => {
 
                             title={
                                 <>
-                                    Sig<b>m</b>a
+                                    APE<b>X</b>
                                 </>}
-                            description="An Anime and gaming-inspired NFT collection - the IP primed for expansion."
+                            description="
+
+A rider-driven and terrain-inspired collective — the standard primed for global conquest."
                         />
                     </BentoTilt>
-                    <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0'>
+                    <BentoTilt className=' bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0'>
                         <BentoCard
+                            titleColor=" text-orange-500 "
                             src="videos/feature-3.mp4"
                             title={
                                 <>
-                                    n<b>e</b>xus
+                                    ORA<b>N</b>GE W<b>O</b>RLD
                                 </>
                             }
-                            description="A gamifies social hub, adding a new dimension of play to social interaction for web3 communities."
+                            description="
+A hyper-connected rider network, adding a new dimension of adrenaline to the trail for the global KTM collective."
                         />
 
                     </BentoTilt>
@@ -110,16 +113,18 @@ const Features = () => {
                             src="videos/feature-4.mp4"
                             title={
                                 <>
-                                    az<b>u</b>l
+                                    A<b>M</b>T
                                 </>
                             }
-                            description="A cross-world AI agent - elevating your gameplay to be more fun and productive."
+                            description="
+
+A revolutionary automated manual transmission — elevating your shifting to be more fluid and purely instinctive."
                         />
 
                     </BentoTilt>
                     <BentoTilt className=' bento-tilt_2'>
-                        <div className='flex size-full flex-col justify-between bg-violet-300 p-5'>
-                            <h1 className='bento-title special-font max-w-64 text-black'>M<b>o</b>re <b>c</b>oming s<b>o</b>on</h1>
+                        <div className='flex size-full flex-col justify-between bg-orange-500 p-5 brightness-95'>
+                            <h1 className='bento-title special-font max-w-64 text-black text-8xl'>EX<b>P</b>ERIENCE T<b>H</b>E A<b>D</b>RENALI<b>N</b>E</h1>
                             <TiLocationArrow className='m-5 scale-[5] self-end' />
                         </div>
                     </BentoTilt>
@@ -128,7 +133,7 @@ const Features = () => {
                             loop
                             autoPlay
                             muted
-                            className=' size-full object-cover  object-center' />
+                            className='brightness-90 size-full object-cover  object-center' />
                     </BentoTilt>
                 </div>
             </div>

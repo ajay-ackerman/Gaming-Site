@@ -1,15 +1,14 @@
-import { FaDiscord, FaTwitter, FaYoutube, FaMedium, FaInstagram } from "react-icons/fa";
+import { FaDiscord, FaTwitter, FaYoutube, FaMedium, FaInstagram, FaGithub } from "react-icons/fa";
 
 const socialLinks = [
-    { href: "https://discord.com", icon: <FaDiscord /> },
-    { href: "https://twitter.com", icon: <FaTwitter /> },
-    { href: "https://instagram.com", icon: <FaInstagram /> },
-    { href: "https://medium.com", icon: <FaMedium /> },
+    { href: "https://github.com/ajay-ackerman", icon: <FaGithub /> },
+    { href: "https://x.com/India_KTM/", icon: <FaTwitter /> },
+    { href: "https://www.instagram.com/ktm_official/?hl=en", icon: <FaInstagram /> },
 ];
 
 const Footer = () => {
     return (
-        <footer className="w-screen bg-[#5542ff] py-4 text-black">
+        <footer className="w-screen bg-orange-400 py-4 text-black">
             <div className="container mx-auto flex  items-center justify-between gap-4 px-4 flex-row w-full">
 
                 <div className="flex justify-center gap-4 w-full ">

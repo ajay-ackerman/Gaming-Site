@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <main className='relative min-h-screen w-screen overflow-x-hidden bg-violet-50'>
+    <main className='relative min-h-screen w-screen overflow-x-hidden bg-orange-50'>
       <Navbar />
       <Hero />
       <About />

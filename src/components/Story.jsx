@@ -49,16 +49,16 @@ const FloatingImage = () => {
         <div id="story" className="min-h-dvh w-screen bg-black text-blue-50">
             <div className="flex size-full flex-col items-center py-10 pb-24">
                 <p className="font-general text-sm uppercase md:text-[10px]">
-                    the multiversal ip world
+                    The Orange Factory World
                 </p>
 
                 <div className="relative size-full">
                     <AnimatedTitle
-                        title="the st<b>o</b>ry of <br /> a hidden real<b>m</b>"
+                        title="the e<b>c</b>ho of an <br /> unm<b>a</b>pped vall<b>e</b>y"
                         containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
                     />
 
-                    <div className="story-img-container">
+                    <div className="story-img-container -ml-20">
                         <div className="story-img-mask">
                             <div className="story-img-content">
                                 <img
@@ -67,8 +67,8 @@ const FloatingImage = () => {
                                     onMouseLeave={handleMouseLeave}
                                     onMouseUp={handleMouseLeave}
                                     onMouseEnter={handleMouseLeave}
-                                    src="/img/entrance.webp"
-                                    alt="entrance.webp"
+                                    src="/img/entrance.jpg"
+                                    alt="entrance.jpg"
                                     className="object-contain"
                                 />
                             </div>
@@ -106,14 +106,14 @@ const FloatingImage = () => {
                 <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
                     <div className="flex h-full w-fit flex-col items-center md:items-start">
                         <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-                            Where realms converge, lies Zentry and the boundless pillar.
-                            Discover its secrets and shape your fate amidst infinite
-                            opportunities.
+                            Where terrains collide,
+                            lies the Orange Beast and the vertical limit.
+                            Master the machine and define your line amidst infinite technical challenges
                         </p>
 
                         <Button
                             id="realm-btn"
-                            title="discover prologue"
+                            title="Explore the ascent"
                             containerClass="mt-5"
                         />
                     </div>
