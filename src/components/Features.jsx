@@ -1,5 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { TiLocationArrow } from 'react-icons/ti'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger);
+
 const BentoTilt = ({ children, className = '' }) => {
     const [transformStyle, setTransformStyle] = useState('')
     const itemRef = useRef()
@@ -59,10 +64,25 @@ const BentoCard = ({ src, title, description, titleColor = 'text-blue-50', descr
 }
 
 const Features = () => {
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        // Animation to change background color
+        gsap.to(sectionRef.current, {
+            backgroundColor: "black", // The target color (Deep KTM Charcoal)
+            scrollTrigger: {
+                trigger: "#features",
+                start: "bottom top", // Starts when bottom of #features hits center of viewport
+                end: "+=500",    // Ends when bottom of #features hits top of viewport
+                scrub: 1,          // Smooth transition linked to scroll
+            },
+            ease: 'power1.inOut'
+        });
+    }, []);
     return (
-        <section className='bg-black pb-52 '>
+        <section ref={sectionRef} className=' pb-52 '>
             <div className='container mx-auto px-3 md:px-10'>
-                <div className='px-5 py-32'>
+                <div id='features' className='px-5 py-32'>
                     <p className=' font-circular-web text-lg text-blue-50'>
                         Into the Flow State
                     </p>

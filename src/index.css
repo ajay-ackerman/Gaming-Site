@@ -48,6 +48,21 @@ body {
   width: 100dvw;
   background-color: #dfdff0;
   overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ed6c02;
+
 }
 
 @layer base {
